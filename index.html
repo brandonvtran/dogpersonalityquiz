@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Bellefair|Barlow+Semi+Condensed|Spectral+SC" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Dog Personality Quiz</title>
+    <style>
+      button {
+        background: #ededed;
+        border: 1px solid #ccc;
+        -webkit-box-shadow: 1px 1px 2px #ccc;
+           -moz-box-shadow: 1px 1px 2px #ccc;
+                box-shadow: 1px 1px 2px #ccc;
+        padding: 10px 30px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      button:focus {
+        background: #e0e0e0;
+        outline: none;
+        -webkit-box-shadow: inset 0px 0px 4px #ccc;
+           -moz-box-shadow: inset 0px 0px 4px #ccc;
+                box-shadow: inset 0px 0px 4px #ccc;
+      }
+      #done-button {
+        background-color: #35C2AA;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        font-size: 25px;
+       width: 240px;
+       position:relative;
+       top: 20px;
+       left: 1100px;
+       right: 0px;
+       bottom: -20px;
+
+      }
+
+      #button1,#button2,#button3,#button4,#button5,#button6,#button7,#button8,#button9,#button10,#button11,#button12,#button13,#button14,#button15,#button16,#button17,#button18,#button19,#button20 {
+      background-color: #B86553;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      font-size: 20px;
+      width:240px
+
+      }
+
+      #questions {
+        font-family: 'Bellefair', serif;
+        font-size: 22px;
+      }
+
+      #answer {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+        font-family: 'Barlow Semi Condensed', serif;
+        font-size: 18px;
+        border: ridge;
+        position:relative;
+        top: 20px;
+        left: 0px;
+        right: 70px;
+        bottom: -20px;
+      }
+
+      #shadow {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #initial-title {
+        text-align: center;
+      }
+
+      #buttons-div {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90em;
+        text-align: left;
+      }
+
+      #title-block {
+        border: ridge;
+        border-width: 20px;
+        width:800px;
+        font-family:'Spectral SC', serif;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70em;
+        text-align: left;
+      }
+
+      body {
+        padding-bottom: 50px;
+        padding-top: 50px;
+      }
+
+      h1 {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--header-->
+    <div id="title-block">
+    <h1 id="initial-title">Dog Personality Quiz</h1>
+    <h2 id="initial-title">Which Dog Breed Are You?</h2>
+    <img src="img/dogshadow.jpg" width="200" id="shadow">
+    </div>
+
+    <!--Questions-->
+    <div id="buttons-div">
+    <h2>Questions</h2>
+    <br/>
+
+    <p id="questions">How do you like to play?</p>
+    <button type="button" onClick="addScoreD();boldtext(1);" id="button1">rough</button>
+    <button type="button" onClick="addScoreC();boldtext(2);" id="button2">nice</button>
+    <button type="button" onClick="addScoreA();boldtext(3);" id="button3">alone</button>
+    <button type="button" onClick="addScoreB();boldtext(4);" id="button4">i don't</button>
+  </br></br>
+
+    <p id="questions">Where do you like to hang out?</p>
+    <button type="button" onClick="addScoreA();boldtext(5);" id="button5">the park</button>
+    <button type="button" onClick="addScoreB();boldtext(6);" id="button6">the pool</button>
+    <button type="button" onClick="addScoreB();boldtext(7);" id="button7">inside</button>
+    <button type="button" onClick="addScoreD();boldtext(8);" id="button8">anywhere</button>
+  </br></br>
+
+    <p id="questions">What is your favorite activity?</p>
+    <button type="button" onClick="addScoreC();boldtext(9);" id="button9">netflix</button>
+    <button type="button" onClick="addScoreD();boldtext(10);" id="button10">exploring</button>
+    <button type="button" onClick="addScoreA();boldtext(11);" id="button11">puzzles</button>
+    <button type="button" onClick="addScoreB();boldtext(12);" id="button12">nap time</button>
+  </br></br>
+
+    <p id="questions">How would you describe yourself?</p>
+    <button type="button" onClick="addScoreD();boldtext(13);" id="button13">cheerful</button>
+    <button type="button" onClick="addScoreB();boldtext(14);" id="button14">calm</button>
+    <button type="button" onClick="addScoreA();boldtext(15);" id="button15">loyal</button>
+    <button type="button" onClick="addScoreC();boldtext(16);" id="button16">loving</button>
+  </br></br></br>
+
+  <p id="questions">What do you do when you greet someone new?</p>
+  <button type="button" onClick="addScoreD();boldtext(17);" id="button17">wave</button>
+  <button type="button" onClick="addScoreB();boldtext(18);" id="button18">hug them</button>
+  <button type="button" onClick="addScoreA();boldtext(19);" id="button19">run away</button>
+  <button type="button" onClick="addScoreC();boldtext(20);" id="button20">offer food</button>
+</br></br></br>
+
+</div>
+
+    <button type="button" onClick="showDog();" id="done-button">Done</button>
+  </br></br></br></br></br>
+
+    <p id="answer"></p>
+  </body>
+  <script>
+    function addScoreA() {
+      if (localStorage.getItem("score") == null) {
+        localStorage.setItem("score", 0);
+      }
+      var score = parseInt(localStorage.getItem("score")) + 1;
+      var scoreS = score.toString();
+      localStorage.setItem("score", scoreS);
+    }
+    function addScoreB() {
+      if (localStorage.getItem("score") == null) {
+        localStorage.setItem("score", 0);
+      }
+      var score = parseInt(localStorage.getItem("score")) + 2;
+      var scoreS = score.toString();
+      localStorage.setItem("score", scoreS);
+    }
+    function addScoreC() {
+      if (localStorage.getItem("score") == null) {
+        localStorage.setItem("score", 0);
+      }
+      var score = parseInt(localStorage.getItem("score")) + 3;
+      var scoreS = score.toString();
+      localStorage.setItem("score", scoreS);
+    }
+    function addScoreD() {
+      if (localStorage.getItem("score") == null) {
+        localStorage.setItem("score", 0);
+      }
+      var score = parseInt(localStorage.getItem("score")) + 4;
+      var scoreS = score.toString();
+      localStorage.setItem("score", scoreS);
+    }
+
+    //shows dog in modal and resets score back to 0
+    function showDog() {
+      var score = parseInt(localStorage.getItem("score"));
+      var scoreS;
+      if(score % 4 == 0) {
+        document.getElementById("answer").innerHTML = "You are a Corgi! <br> The Defender </br> <img src=\"img/corgi.jpg\" width=\"350\"/> <br/> Never hurt the friends of a corgi. You are an unconditional friend to others and you will defend those who are being hurt at all costs. With your tencaious heart and free spirit, you will stop at nothing to defend the things that matter most to you.";
+      }
+      else if(score % 4 == 1) {
+        document.getElementById("answer").innerHTML = "You are a Husky! </br> The Enigma </br> <img src=\"img/husky.jpg\" width=\"350\"/> <br/> This means you are an object of mysticism and enigma. You will continue to inspire the people around you with your leadership and constant loyalty to others. Many will underestimate you in your journey, but your kind soul and timeless wisdom will lead them through their darkest hours.";
+      }
+      else if(score % 4 == 2) {
+        document.getElementById("answer").innerHTML = "You are a Cat! </br> The Unconventionalist </br> <img src=\"img/cat.jpg\" width=\"350\"/> <br/> Is this a mistake? No! You always value unconventionalism and idoionsyncrasy. You are your own individual, and you never cease to surprise people with your creative ideas and interesting take on things. Many people will question your different approach, but your fresh perspective and pragmaticism will inspire others to be themselves.";
+      }
+      else {
+        document.getElementById("answer").innerHTML = "You are a Shih Tzu! <br> The Kindler <br/> <img src=\"img/shihtzu.jpg\" width=\"350\"/> <br/> Shih Tzus never cease to inspire others with their humor and sensitive spirits. They always know how to cheer someone up, with their kind deameanors and attentive personalities. People will naturally gravitate towards you for your postivity and immersion in the world around you, and your vibrant charisma will leave a riplling effect to your pack and friends.";
+      }
+      localStorage.setItem("score", 0);
+    }
+
+    //bolds text in button when the button is pressed
+    function boldtext (number) {
+      document.getElementById('button' + number).style.fontWeight = 'bold';
+    }
+  </script>
+  <!-- JS -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+</html>
